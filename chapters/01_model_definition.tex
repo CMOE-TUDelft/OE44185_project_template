@@ -10,7 +10,7 @@
 \instructionplaceholder{Required evidence}{List physical assumptions and scope limits before presenting equations or implementation choices. State what is included, what is excluded, expected impact of each simplification, and the operational range for which your model is intended.}
 
 \subsection{Geometry and system definition}
-\instructionplaceholder{Required evidence}{Define the 2D model geometry and all major components: RNA point mass, tower model, spar-buoy body, and mooring representation. State dimensions, reference coordinates, and parameter sources used for the OC3/NREL 5MW representation.}
+\instructionplaceholder{Required evidence}{Define the 2D model geometry and all major components: RNA point mass, tower model, spar-buoy body, and mooring representation. State dimensions, reference coordinates, and parameter sources used for the OC3/NREL 5MW representation. You can use the NREL report as a reference: https://docs.nrel.gov/docs/fy11osti/48191.pdf}
 
 \subsection{Structural model components}
 \instructionplaceholder{Pass-level requirements}{Include at minimum: RNA point mass, thin-beam tower, rigid-body spar-buoy, and spring-damper mooring representation calibrated from quasi-static analysis.}
@@ -18,7 +18,15 @@
 \instructionplaceholder{Choice packages}{Describe optional extensions selected by your team, such as coupled axial-bending tower behaviour, geometrically nonlinear mooring strings, or a flexible-beam floater representation. Justify each extension physically and numerically, and explain why it was prioritised over alternatives.}
 
 \subsection{Environmental loading model}
-\instructionplaceholder{Wave, wind, and current forcing}{State the loading models used and where they are applied in the structural model. Include baseline models (Airy waves, Morison loading, equivalent nacelle thrust, mean current force from CFD) and any higher-fidelity options (irregular waves, time-dependent thrust/current loading).}
+\subsubsection{Wave model}
+\instructionplaceholder{Pass-level requirements}{State the wave model(s) used, where they are applied in the structural model, and any assumptions made. Linear Airy wave theory with regular waves as minimum requirement.}
+\instructionplaceholder{Choice packages}{Describe more complex wave descriptions such as irregular waves or higher-order wave theories (Stokes waves). Justify each choice.}
+\subsubsection{Wind model}
+\instructionplaceholder{Pass-level requirements}{State the wind loading model used, where it is applied in the structural model, and any assumptions made. Equivalent nacelle thrust based on rated conditions as minimum requirement. Wind effects on the tower can be neglected.}
+\instructionplaceholder{Choice packages}{Describe more complex wind loading models such as time-dependent thrust. Justify each choice.}
+\subsubsection{Current model}
+\instructionplaceholder{Pass-level requirements}{State the current loading model used, where it is applied in the structural model, and any assumptions made. Mean current force based on CFD results as minimum requirement. Boundary conditions will be specified for each group after Lid-Driven cavity analysis has been succesfully completed. Some groups may be assigned different approach to handle boundary conditions through the use of an immersed boundary method.}
+\instructionplaceholder{Choice packages}{Describe more complex current loading models such as time-dependent current loading or more complex shapes (elipse, rectangle, polygon). Justify each choice.}
 
 \subsection{Governing equations and model scope}
 \instructionplaceholder{Required evidence}{Present governing equations, state variables, coupling interfaces, and unknowns for the coupled system. Keep this section at the continuous-model level only; do not include discretisation details here.}
